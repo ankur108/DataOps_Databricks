@@ -35,9 +35,9 @@ targets:
     variables:
       catalog: dev_tfl_crowding_monitoring
       schema: ${workspace.current_user.short_name}
-  test:
+  staging:
     presets:
-        name_prefix: "[test_${workspace.current_user.short_name}] "
+        name_prefix: "[staging_${workspace.current_user.short_name}] "
     mode: development
     workspace:
       host: https://adb-238737606032625.5.azuredatabricks.net
