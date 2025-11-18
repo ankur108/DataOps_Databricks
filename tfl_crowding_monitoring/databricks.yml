@@ -31,6 +31,7 @@ targets:
       catalog: dev_tfl_crowding_monitoring
       schema: ${workspace.current_user.short_name}
   staging:
+        # The is target uses 'mode: staging' to create a development copy.
     presets:
         name_prefix: "[staging_${workspace.current_user.short_name}] "
     mode: development
