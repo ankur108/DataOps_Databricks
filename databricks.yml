@@ -1,7 +1,7 @@
-# This is a Databricks asset bundle definition for TFLCrowdMonitoring.
+# This is a Databricks asset bundle definition for Databricks_DataOps.
 # See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
 bundle:
-  name: TFLCrowdMonitoring
+  name: Databricks_DataOps
   uuid: 88759488-ef20-4292-afaf-32d199a829ae
 
 include:

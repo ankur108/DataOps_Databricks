@@ -1,5 +1,5 @@
 [project]
-name = "TFLCrowdMonitoring"
+name = "Databricks_DataOps"
 version = "0.0.1"
 authors = [{ name = "rattan-bunting0f_icloud.com#ext#@rattanbunting0ficloud.onmicrosoft.com" }]
 requires-python = ">=3.10,<=3.13"
@@ -19,7 +19,7 @@ dev = [
 ]
 
 [project.scripts]
-main = "TFLCrowdMonitoring.main:main"
+main = "Databricks_DataOps.main:main"
 
 [build-system]
 requires = ["hatchling"]
