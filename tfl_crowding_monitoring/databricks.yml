@@ -33,14 +33,21 @@ targets:
     variables:
       catalog: dev_tfl_crowding_monitoring
       schema: ${workspace.current_user.short_name}
+  test:
+    mode: development
+    workspace:
+      host: https://adb-238737606032625.5.azuredatabricks.net
+    variables:
+      catalog: test_tfl_crowding_monitoring
+      schema: ${workspace.current_user.short_name}
   prod:
     mode: production
     workspace:
-      host: https://adb-585476224876066.6.azuredatabricks.net
+      host: https://adb-1137396238593418.18.azuredatabricks.net
       # We explicitly deploy to /Workspace/Users/rattan-bunting0f_icloud.com#ext#@rattanbunting0ficloud.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Users/rattan-bunting0f_icloud.com#ext#@rattanbunting0ficloud.onmicrosoft.com/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: dev_tfl_crowding_monitoring
+      catalog: prod_tfl_crowding_monitoring
       schema: prod
     permissions:
       - user_name: rattan-bunting0f_icloud.com#ext#@rattanbunting0ficloud.onmicrosoft.com
