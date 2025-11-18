@@ -26,6 +26,8 @@ targets:
     # - Deployed resources get prefixed with '[dev my_user_name]'
     # - Any job schedules and triggers are paused by default.
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
+    presets:
+      name_prefix: "[dev_${workspace.current_user.short_name}] "
     mode: development
     default: true
     workspace:
@@ -34,6 +36,8 @@ targets:
       catalog: dev_tfl_crowding_monitoring
       schema: ${workspace.current_user.short_name}
   test:
+    presets:
+        name_prefix: "[test_${workspace.current_user.short_name}] "
     mode: development
     workspace:
       host: https://adb-238737606032625.5.azuredatabricks.net
@@ -41,6 +45,8 @@ targets:
       catalog: test_tfl_crowding_monitoring
       schema: ${workspace.current_user.short_name}
   prod:
+    presets:
+      name_prefix: "[prod_${workspace.current_user.short_name}] "
     mode: production
     workspace:
       host: https://adb-1137396238593418.18.azuredatabricks.net
